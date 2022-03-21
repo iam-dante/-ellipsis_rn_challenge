@@ -17,7 +17,7 @@ export default function Base() {
   
   return (
     <Tab.Navigator
-      initialRouteName="Cart"
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         tabBarStyle: {height: 60},

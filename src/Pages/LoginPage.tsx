@@ -2,8 +2,14 @@ import React from 'react';
 import {Text, TextInput, View, TouchableOpacity} from 'react-native';
 import {GoogleIcon, FacebookIcon, TwitterIcon} from '../assets/icons';
 import {FontStyle, Font} from '../assets/fonts';
+import { DataState } from '../../App';
+import { PrivateValueStore } from '@react-navigation/core';
 
 export default function LoginPage() {
+
+
+  const {setState} = React.useContext(DataState);
+
   return (
     <View
       style={{
@@ -79,7 +85,15 @@ export default function LoginPage() {
             justifyContent: 'center',
             alignItems: 'center',
             marginTop: '12%',
-          }}>
+          }}
+
+
+          onPress={()=>{setState((pv)=>({
+            ...pv,
+            login:true
+
+          }))}}
+          >
           <Text style={{fontSize: 24, ...FontStyle.bold}}>LOG IN</Text>
         </TouchableOpacity>
 
