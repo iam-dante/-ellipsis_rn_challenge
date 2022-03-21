@@ -4,7 +4,7 @@ import {
   HomeIcon,SearchIcon,SettingIcon, CartIcon
 } from '../assets/icons';
 
-import Home from './HomePage';
+import Home from './HomePages';
 import Settings from './SettingPage';
 import CartPage from './CartPage';
 import SearchPage from './SearchPage';
@@ -17,7 +17,7 @@ export default function Base() {
   
   return (
     <Tab.Navigator
-      initialRouteName="home"
+      initialRouteName="Cart"
       screenOptions={{
         headerShown: false,
         tabBarStyle: {height: 60},

@@ -4,12 +4,27 @@ import LoginPage from './src/Pages/LoginPage'
 import Base from "./src/Pages"
 import {NavigationContainer} from '@react-navigation/native';
 
+export const DataState = React.createContext();
+
+
+
 export  default function App() {
-  return(
-    // <LoginPage/>
+
+  const [state, setState] = React.useState({
+    name: '',
+    details:'',
+    price: '',
+    image:'',
+    cartList: [],
+  });
+
+  return (
     <NavigationContainer>
-      <Base/>
+      <DataState.Provider value={{state, setState}}>
+        <Base />
+       {/* <LoginPage /> */}
+      </DataState.Provider>
     </NavigationContainer>
-  )
+  );
 }
 
