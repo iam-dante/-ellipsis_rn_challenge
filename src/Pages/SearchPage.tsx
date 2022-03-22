@@ -4,9 +4,10 @@ import { Font } from '../assets/fonts';
 
 export default function HomePage() {
   return (
-    <View style={{flex: 1, padding:16}}>
+    <View style={{flex: 1, padding: 16}}>
       <TextInput
         placeholder="Search"
+        placeholderTextColor={'gray'}
         style={{
           borderColor: '#CFCDCD',
           height: 62,

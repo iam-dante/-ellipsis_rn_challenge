@@ -44,7 +44,7 @@ export default function HomePage() {
   const {state} = React.useContext(DataState);
   // console.log(state.cartList)
   return (
-    <View style={{flex: 1, padding: 16}}>
+    <View style={{flex: 1, padding: 16,}}>
       <Text style={{...FontStyle.meduim, fontSize: 30, color: 'black'}}>
         Cart
       </Text>

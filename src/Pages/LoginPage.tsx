@@ -32,6 +32,7 @@ export default function LoginPage() {
           </Text>
           <TextInput
             placeholder="Email"
+            placeholderTextColor={'gray'}
             style={{
               borderColor: '#CFCDCD',
               height: 62,
@@ -50,6 +51,8 @@ export default function LoginPage() {
           </Text>
           <TextInput
             placeholder="Password"
+            placeholderTextColor={'gray'}
+            secureTextEntry={true}
             style={{
               borderColor: '#CFCDCD',
               height: 62,
@@ -85,16 +88,16 @@ export default function LoginPage() {
             justifyContent: 'center',
             alignItems: 'center',
             marginTop: '12%',
+            borderRadius:6
+            
           }}
-
-
-          onPress={()=>{setState((pv)=>({
-            ...pv,
-            login:true
-
-          }))}}
-          >
-          <Text style={{fontSize: 24, ...FontStyle.bold}}>LOG IN</Text>
+          onPress={() => {
+            setState(pv => ({
+              ...pv,
+              login: true,
+            }));
+          }}>
+          <Text style={{fontSize: 24, ...FontStyle.bold}}>Log In</Text>
         </TouchableOpacity>
 
         <View

@@ -10,7 +10,7 @@ export default function ProductPage(){
 
     const {state, setState} = React.useContext(DataState);
     return (
-      <View style={{flex: 1, position:"relative"}}>
+      <View style={{flex: 1, position:"relative", backgroundColor:"#FFFFFF"}}>
           {/* <BackIcon style={{position:'absolute'}} /> */}
         <Image
           style={{height: '50%'}}
@@ -28,6 +28,7 @@ export default function ProductPage(){
                 ...FontStyle.regular,
                 fontSize: 20,
                 marginTop: 12,
+                color:"gray"
               }}>
               {state.details}
             </Text>
