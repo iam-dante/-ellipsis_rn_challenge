@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, Image, ScrollView} from 'react-native';
+import {Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
 import {FontStyle} from '../assets/fonts';
 import {DeleteIcon} from '../assets/icons';
 import {DataState} from '../../App';
@@ -44,17 +44,25 @@ export default function HomePage() {
   const {state} = React.useContext(DataState);
   // console.log(state.cartList)
   return (
-    <View style={{flex: 1, padding: 16,}}>
+    <View style={{flex: 1, padding: 16}}>
       <Text style={{...FontStyle.meduim, fontSize: 30, color: 'black'}}>
         Cart
       </Text>
-      <ScrollView style={{flex: 1, marginTop: 24, }}>
-
-        {
-          state.cartList.map((vl,ix)=>{  return(<CardCart key={ix} name={vl.name} price={vl.price} image={vl.image}/>)})
-        }
-
+      <ScrollView style={{flex: 1, marginTop: 24}}>
+        {state.cartList.map((vl, ix) => {
+          return (
+            <CardCart
+              key={ix}
+              name={vl.name}
+              price={vl.price}
+              image={vl.image}
+            />
+          );
+        })}
       </ScrollView>
+      <TouchableOpacity style={{height: 60, backgroundColor: '#1BCABF', borderRadius: 6, justifyContent:'center', alignItems:'center'}}>
+        <Text style={{fontSize:28, ...FontStyle.meduim, color:"black"}}>Submit</Text>
+      </TouchableOpacity>
     </View>
   );
 }
